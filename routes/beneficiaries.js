@@ -21,6 +21,7 @@ router.post("/", (req, res) => {
   beneficiaries.push(beneficiary);
 
   res.send(`${beneficiary.firstName} added to your list`);
+  console.log(beneficiaries);
 });
 
 export default router;
