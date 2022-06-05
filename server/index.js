@@ -12,10 +12,10 @@ const PORT = 5503;
 //connect to db
 
 mongoose.connect(process.env.DB_CONNECT, () => console.log("connected to db"));
-
+//middleware
 app.use(bodyParser.json());
 
-app.use("/beneficiaries", beneficiaryRoutes);
+app.use("/azaholder", beneficiaryRoutes);
 
 app.get("/", (req, res) => {
   console.log("hi");
