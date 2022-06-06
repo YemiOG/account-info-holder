@@ -1,6 +1,6 @@
 import express from "express";
 import Beneficiary from "../model/Beneficiary.js";
-
+import mongoose from "mongoose";
 const router = express.Router();
 
 // const beneficiaries = [
@@ -17,7 +17,9 @@ const router = express.Router();
 //   res.send(beneficiaries);
 // });
 
-router.post("/add-beneficiary", async (req, res) => {
+//create new beneficiary
+
+router.post("/addbeneficiary", async (req, res) => {
   const beneficiary = new Beneficiary({
     firstName: req.body.firstName,
     lastName: req.body.firstName,
@@ -25,12 +27,14 @@ router.post("/add-beneficiary", async (req, res) => {
     accountNumber: req.body.accountNumber,
   });
   try {
-    const savedBeneficiary = await beneficiary.save;
+    console.log("here");
+    await beneficiary.save();
+    console.log(here2);
   } catch (error) {
     res.status(400).send(error);
   }
 
-  res.send(`${beneficiary.firstName} added to your list`);
+  res.send(`${beneficiary.firstName} added yo the list`);
 });
 
 export default router;

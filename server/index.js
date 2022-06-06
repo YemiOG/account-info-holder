@@ -15,7 +15,10 @@ mongoose.connect(process.env.DB_CONNECT, () => console.log("connected to db"));
 //middleware
 app.use(bodyParser.json());
 
+//routes
 app.use("/azaholder", beneficiaryRoutes);
+
+// app.use(express.json());
 
 app.get("/", (req, res) => {
   console.log("hi");
