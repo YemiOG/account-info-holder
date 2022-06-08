@@ -29,7 +29,7 @@ router.post("/addbeneficiary", async (req, res) => {
   try {
     console.log("here");
     await beneficiary.save();
-    console.log(here2);
+    console.log("here2");
   } catch (error) {
     res.status(400).send(error);
   }
