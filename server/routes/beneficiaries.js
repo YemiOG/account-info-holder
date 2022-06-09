@@ -19,7 +19,11 @@ const router = express.Router();
 
 //create new beneficiary
 
-router.post("/addbeneficiary", async (req, res) => {
+/* @route POST azaholder/add-aza 
+   @access public
+   @desc add your details  */
+
+router.post("/add-aza", async (req, res) => {
   const beneficiary = new Beneficiary({
     firstName: req.body.firstName,
     lastName: req.body.firstName,
@@ -27,9 +31,7 @@ router.post("/addbeneficiary", async (req, res) => {
     accountNumber: req.body.accountNumber,
   });
   try {
-    console.log("here");
     await beneficiary.save();
-    console.log("here2");
   } catch (error) {
     res.status(400).send(error);
   }
