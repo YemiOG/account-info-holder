@@ -57,14 +57,12 @@ html {
 /* FOOTER */
 .footer {
   border-top: solid 1px #eee;
-  height: 9.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
   padding: 0 4.8rem;
   position: relative;
-  margin-bottom: 9.6rem;
 }
 
 .footer-logo {

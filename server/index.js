@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import beneficiaryRoutes from "./routes/beneficiaries.js";
+import usersRoutes from "./routes/users.js";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 
@@ -17,6 +18,7 @@ app.use(bodyParser.json());
 
 //routes
 app.use("/azaholder", beneficiaryRoutes);
+app.use("/azaholder", usersRoutes);
 
 // app.use(express.json());
 
