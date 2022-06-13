@@ -11,9 +11,11 @@
   "author": "Yemi Ogundeyi",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoose": "^6.3.5",
+    "passport": "^0.6.0",
     "validator": "^13.7.0"
   },
   "devDependencies": {
