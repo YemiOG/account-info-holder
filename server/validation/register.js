@@ -40,3 +40,15 @@ const validateRegisterInput = (data) => {
 };
 
 export default validateRegisterInput;
+
+// function celsiusToFahrenheit(arrayOfNumbers) {
+//   let degreeF = 0;
+//   for (let i = 0; i < arrayOfNumbers.length; i++) arrayOfNumbers[i] * 1.8 + 32;
+//   return arrayOfNumbers;
+// }
+
+const celsiusToFahrenheit = (arrayOfNumbers) =>
+  arrayOfNumbers.map((x) => Math.round(x * 1.8 + 32));
+
+let arrayOfNumbers = [26, 10, 0, 4, 3, 34, 5, 6, 23];
+console.log(celsiusToFahrenheit(arrayOfNumbers));
